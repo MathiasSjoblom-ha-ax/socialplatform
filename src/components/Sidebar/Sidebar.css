@@ -1,0 +1,26 @@
+.Sidebar {
+    flex: 2.5;
+}
+
+.sbWrapper {
+    padding: 15px;
+}
+
+.sbList {
+    list-style: none;
+}
+
+.sbItems {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sbItemImage {
+    height: 30px;
+    width: 30px;
+}
+
+.sbItemText {
+    margin-left: 15px;
+}
