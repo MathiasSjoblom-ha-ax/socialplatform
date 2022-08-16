@@ -9,6 +9,15 @@ export default function Feed() {
                 <Postbox/>
                 <div className="posts">
                     <Post/>
+                    <Post/>
+                    <Post/>
+                    <Post/>
+                    <Post/>
+                    <Post/>
+                    <Post/>
+                    <Post/>
+                    <Post/>
+                    
                 </div>
             </div>
         </div>
