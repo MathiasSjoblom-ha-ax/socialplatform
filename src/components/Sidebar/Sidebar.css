@@ -25,6 +25,7 @@
 
 .sbItemText {
     margin-left: 15px;
+    cursor: pointer;
 }
 
 .followingList {
@@ -41,6 +42,7 @@
 
 .followingContainer {
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .followingAvatar {
@@ -48,9 +50,10 @@
     width: 40px;
 }
 
-.lineSep {
+.line {
     margin-bottom: 15px;
-    margin-right: 250px;
+    margin-right: 300px;
+    
 }
 
 .FollowingName {

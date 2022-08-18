@@ -19,7 +19,7 @@ export default function Post() {
                     <span className="commentCount"> 0 comments</span>
             </div>
         </div>
-        <hr className="lineSep"/>
+        <hr className="efterLine"/>
     </div>
   )
 }

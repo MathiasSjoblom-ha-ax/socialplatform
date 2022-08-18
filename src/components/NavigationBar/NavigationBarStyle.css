@@ -1,26 +1,40 @@
 .NavContainer {
     height: 75px;
     width: 100%;
-    background-color: #08ace2;
+    background-color: #202327;
     display: flex;
-    align-items: center;
     position: sticky;
+    align-items: center;
     top: 0;
 }
 
 .leftPart {
     flex: 4;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
 }
 
 .centerPart {
     flex: 3;
 }
 
+.vl {
+    border-left: 1px solid #202327;
+    height: 2000px;
+    margin-left: -233px;
+  }
+
+.vl2 {
+    border-left: 1px solid #202327;
+    border-right: 1px solid #202327;
+    height: 2000px;
+    margin-left: -233px;
+    margin-right: -42px;
+  }
+
 .rightPart {
-    flex: 5;
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .searchBox {
@@ -30,7 +44,6 @@
     border-radius: 30px;
     display: flex;
     align-items: center;
-    margin-left: 250px;
 }
 
 .searchInput {
@@ -61,6 +74,7 @@
     width: 40px;
     height: 50px;
     cursor: pointer;
+    color: white;
 }
 
 .chat {

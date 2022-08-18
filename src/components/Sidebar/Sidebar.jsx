@@ -27,7 +27,7 @@ export default function Sidebar() {
               <span className="sbItemText">Homepage</span>
             </li>
         </ul>
-        <hr className="lineSep"/>
+        <hr className="line"/>
         <h1 className="followingTitle">Following</h1>
         <ul className="followingList">
             <li className="followingStatus">
