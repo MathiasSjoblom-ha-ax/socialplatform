@@ -1,0 +1,103 @@
+.profileContainer {
+    display: flex;
+}
+
+.profileMid {
+    flex: 6.5;
+}
+
+.profileBot {
+    display: flex;
+}
+
+.profileImages {
+    height: 320px;
+    position: relative;
+    object-fit: cover;
+}
+
+.profileCover {
+    width: 61.5%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.profileAvatar {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    right: 1;
+    margin-left: 50px;
+    top: 150px;
+    border: 3px solid black;
+}
+
+.profileDescription{
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
+.profileDescriptionText {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.followButton {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.profileFollowStats{
+    display: flex;
+}
+
+.profileFollowerCount {
+    margin-right: 50px;
+}
+
+.followersCount {
+    margin-left: 10px;
+}
+
+.followingCount {
+    margin-left: 10px;
+}
+
+.profileName {
+    font-size: 25px;
+}
+  
+.dropbtn {
+    margin-top: 10px;
+    margin-left: 700px;
+}
+
+.profileButtons {
+    display: flex;
+}
+
+.dropdown {
+position: relative;
+display: inline-block;
+}
+  
+.dropdown-content {
+margin-left: 700px;
+display: none;
+position: absolute;
+background-color: #f1f1f1;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+  
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+  
+.dropdown:hover .dropdown-content {display: block;}

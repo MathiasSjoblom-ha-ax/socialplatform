@@ -9,6 +9,8 @@
 }
 
 .sbList {
+    padding: 0;
+    margin: 0;
     list-style: none;
 }
 
@@ -37,7 +39,7 @@
 .followingStatus {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .followingContainer {
@@ -57,9 +59,7 @@
 }
 
 .FollowingName {
-    margin-left: 50px;
-    margin-top: -33px;
-    
+    margin-left: 15px;
 }
 
 .followingTitle {

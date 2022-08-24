@@ -1,9 +1,9 @@
-import NavigationBar from "./components/NavigationBar/NavigationBar";
-import Home from "./pages/home/Home";
+import Home from "./pages/Home";
+import Profile from "./pages/profilePage/Profile";
 
 function App() {
   return (
-    <Home/>
+    <Profile/>
   );
 }
 

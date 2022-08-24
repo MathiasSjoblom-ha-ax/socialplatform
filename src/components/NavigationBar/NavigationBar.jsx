@@ -4,13 +4,13 @@ export default function NavigationBar() {
     return (
         <div className="NavContainer">
                 <div className="leftPart">
-                    <span className="logo">Media</span>
+                    <div className="searchBox">
+                    <input placeholder="Search" className="searchInput"/>
+                </div>
                 </div>
             <div className="centerPart">
                 <div class="vl"/>
-                <div className="searchBox">
-                    <input placeholder="Search" className="searchInput"/>
-                </div>
+                <span className="logo">Media</span>
                 <div class="vl2"/>
             </div>
                 <div className="rightPart">

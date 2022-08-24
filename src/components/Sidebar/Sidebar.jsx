@@ -28,30 +28,30 @@ export default function Sidebar() {
             </li>
         </ul>
         <hr className="line"/>
-        <h1 className="followingTitle">Following</h1>
+        <h2 className="followingTitle">Following</h2>
         <ul className="followingList">
             <li className="followingStatus">
                 <div className="followingContainer">
                     <img className="followingAvatar" src="./assets/images/friend.png"/>
-                    <h1 className="FollowingName">Nicolas Cage</h1>
+                    <span className="FollowingName">Nicolas Cage</span>
                 </div>
             </li>
             <li className="followingStatus">
                 <div className="followingContainer">
                     <img className="followingAvatar" src="./assets/images/friend.png"/>
-                    <h1 className="FollowingName">Nicolas Cage</h1>
+                    <span className="FollowingName">Nicolas Cage</span>
                 </div>
             </li>
             <li className="followingStatus">
                 <div className="followingContainer">
                     <img className="followingAvatar" src="./assets/images/friend.png"/>
-                    <h1 className="FollowingName">Nicolas Cage</h1>
+                    <span className="FollowingName">Nicolas Cage</span>
                 </div>
             </li>
             <li className="followingStatus">
                 <div className="followingContainer">
                     <img className="followingAvatar" src="./assets/images/friend.png"/>
-                    <h1 className="FollowingName">Nicolas Cage</h1>
+                    <span className="FollowingName">Nicolas Cage</span>
                 </div>
             </li>
         </ul>
