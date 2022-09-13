@@ -44,7 +44,7 @@ export default function Profile() {
                     </div>
                 </div>
                 <div className='profileBot'>
-                    <Feed/>
+                    <Feed profile/>
                     <Adbar/>
                 </div>
             </div>
