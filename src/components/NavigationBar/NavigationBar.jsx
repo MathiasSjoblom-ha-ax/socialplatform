@@ -1,4 +1,5 @@
 import "./NavigationBarStyle.css"
+import {Link} from 'react-router-dom';
 
 export default function NavigationBar() {
     return (
@@ -10,7 +11,9 @@ export default function NavigationBar() {
                 </div>
             <div className="centerPart">
                 <div class="vl"/>
-                <span className="logo">Media</span>
+                <Link to="/">
+                    <span className="logo">Media</span>
+                </Link>
                 <div class="vl2"/>
             </div>
                 <div className="rightPart">
