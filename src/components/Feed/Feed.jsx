@@ -8,14 +8,23 @@ import axios from "axios"
 export default function Feed() {
     
     const [posts, setPosts] = useState([]);
+
     useEffect(() => {
         const fetchPosts = async () => {
-            const response = await axios.get("posts/feed/6322746ec3bd0b60850de615");
-            //setPosts(response.data);
-            console.log(response);
+            try {
+                const response = await fetch("posts/feed/632276de3c6f65d41493b950");
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                const data = await response.json();
+                //setPosts(data);
+                console.log(data);
+            } catch (error) {
+                console.error("Error fetching data:", error);
+            }
         }
         fetchPosts();
-    }, [])
+    }, []);
     
 
     const FeedVersion = () => {

@@ -22,10 +22,6 @@ export default function Sidebar() {
               <img className="sbItemImage" src="./assets/images/homepage.png"/>
               <span className="sbItemText">Groups</span>
             </li>
-            <li className="sbItems">
-              <img className="sbItemImage" src="./assets/images/homepage.png"/>
-              <span className="sbItemText">Homepage</span>
-            </li>
         </ul>
         <hr className="line"/>
         <h2 className="followingTitle">Following</h2>

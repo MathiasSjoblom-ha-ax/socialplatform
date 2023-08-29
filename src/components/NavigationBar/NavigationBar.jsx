@@ -10,11 +10,11 @@ export default function NavigationBar() {
                 </div>
                 </div>
             <div className="centerPart">
-                <div class="vl"/>
+                <div className="vl"/>
                 <Link to="/">
                     <span className="logo">Media</span>
                 </Link>
-                <div class="vl2"/>
+                <div className="vl2"/>
             </div>
                 <div className="rightPart">
                     <img className="friend" src="/assets/images/friend.png"/>

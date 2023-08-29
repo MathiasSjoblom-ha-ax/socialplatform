@@ -1,6 +1,6 @@
 import {React, useEffect, useState} from 'react'
 import "./Post.css"
-import axios from 'axios';
+import SvgLike from '../../Svgicons/Like';
 import {Users} from "../../../testData";
 
 export default function Post({post}) {
@@ -30,7 +30,8 @@ const likeFunction = () => {
                 <img className="postImage" src={post.image}/>
                 <span className="postText">{post.description}</span>
             <div className="bottomPart">
-                    <img className="likeIcon" src="./assets/images/like.png" onClick={likeFunction}/>
+                    {/* <img className="likeIcon" src="./assets/images/like.png" onClick={likeFunction}/> */}
+                    <SvgLike onClick={likeFunction}/>
                     <span className="likeCount">{like}</span>
                     <span className="commentCount"> 0 comments</span>
             </div>
