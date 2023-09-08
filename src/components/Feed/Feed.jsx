@@ -3,7 +3,6 @@ import "./Feed.css"
 import Post from "./Post/Post"
 import Postbox from "./Postbox/Postbox"
 import {Posts} from "../../testData"
-import axios from "axios"
 
 export default function Feed() {
     
@@ -17,8 +16,8 @@ export default function Feed() {
                     throw new Error("Network response was not ok");
                 }
                 const data = await response.json();
-                //setPosts(data);
-                console.log(data);
+                setPosts(data);
+                {/* console.log(data); */}
             } catch (error) {
                 console.error("Error fetching data:", error);
             }
@@ -33,8 +32,8 @@ export default function Feed() {
             <div className="postWrapper">
                 <Postbox/>
                 <div className="posts">
-                    {Posts.map(pst=> (
-                        <Post key={pst.id} post={pst}/>
+                    {posts.map(pst=> (
+                        <Post key={pst._id} post={pst}/>
                     ))}
                 </div>
             </div>

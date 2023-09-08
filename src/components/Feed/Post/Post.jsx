@@ -1,12 +1,32 @@
 import {React, useEffect, useState} from 'react'
 import "./Post.css"
 import SvgLike from '../../Svgicons/Like';
-import {Users} from "../../../testData";
+import {format} from "timeago.js"
 
 export default function Post({post}) {
 
+
 const [like, setLike] = useState(post.like);
 const [liked, setLiked] = useState(false);
+const [user, setUser] = useState({});
+
+//Hämta användare med ID
+useEffect(() => {
+  const fetchUsers = async () => {
+      try {
+          const response = await fetch(`users/${post.userId}`);
+          if (!response.ok) {
+              throw new Error("Network response was not ok");
+          }
+          const data = await response.json();
+          setUser(data);
+          {/* console.log(data); */}
+      } catch (error) {
+          console.error("Error fetching users:", error);
+      }
+  }
+  fetchUsers();
+}, [post.userId]);
 
 //Gilla post
 const likeFunction = () => {
@@ -22,17 +42,17 @@ const likeFunction = () => {
     <div className="post">
         <div className="postWrapper">
             <div className="topPart">
-                <img className="postAvatar" src="./assets/images/Avatar.png"/>
-                <span className="postName">{Users.filter(user=>user.id === post.userId)[0].username}</span>
-                <span className="postDate">{post.date}</span>
+                <img className="postAvatar" src={user.avatar || "./assets/images/Avatar.png"}/>
+                <span className="postName">{user.username}</span>
+                <span className="postDate">{format(post.createdAt)}</span> {/* Timeago library för att hämta skapad tid av post */}
             </div>
             <div className="middlePart"></div>
-                <img className="postImage" src={post.image}/>
+                <img className="postImage" src={"./assets/images/"+post.image}/>
                 <span className="postText">{post.description}</span>
             <div className="bottomPart">
                     {/* <img className="likeIcon" src="./assets/images/like.png" onClick={likeFunction}/> */}
                     <SvgLike onClick={likeFunction}/>
-                    <span className="likeCount">{like}</span>
+                    <span className="likeCount">{post.likes.length}</span>
                     <span className="commentCount"> 0 comments</span>
             </div>
         </div>
