@@ -1,4 +1,6 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
+import { useParams } from "react-router"
 import "./Profile.css"
 import Feed from '../../components/Feed/Feed'
 import Sidebar from '../../components/Sidebar/Sidebar'
@@ -6,16 +8,35 @@ import Adbar from '../../components/Adbar/Adbar'
 import NavigationBar from '../../components/NavigationBar/NavigationBar'
 
 export default function Profile() {
+    const [user, setUser] = useState({});
+    const username = useParams().username;
+
+    useEffect(() => {
+        const fetchUsers = async () => {
+            try {
+                const response = await fetch(`/users?username=${username}`);
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                const data = await response.json();
+                setUser(data);
+            } catch (error) {
+                console.error("Error fetching users:", error);
+            }
+        }
+        fetchUsers();
+      }, [username]);
+
   return (
     <div>
         <NavigationBar/>
         <div className='profileContainer'>
-            <Sidebar/>
+            <Sidebar user={user}/>
             <div className='profileMid'>
                 <div className='profileMidTop'>
                     <div className='profileImages'>
-                        <img className="profileCover" src="./assets/images/Post.png"/>
-                        <img className="profileAvatar" src="./assets/images/Avatar.png"/>
+                        <img className="profileBanner" src={user.banner || "../assets/images/Post.png"}/>
+                        <img className="profileAvatar" src={user.avatar || "../assets/images/Avatar.png"}/>
                         <div className='profileButtons'>
                             <div class="dropdown">
                                 <button class="dropbtn">More</button>
@@ -29,8 +50,8 @@ export default function Profile() {
                         </div>
                     </div>
                     <div className='profileDescription'>
-                        <h4 className='profileName'>Nicolas Cage</h4>
-                        <div className='profileDescriptionText'>Hello and welcome to my profile</div>
+                        <h4 className='profileName'>{user.username}</h4>
+                        <div className='profileDescriptionText'>{user.description}</div>
                         <div className='profileFollowStats'>
                             <div className='profileFollowerCount'>
                                 <span className='followersText'>Followers:</span>
@@ -44,7 +65,7 @@ export default function Profile() {
                     </div>
                 </div>
                 <div className='profileBot'>
-                    <Feed profile/>
+                    <Feed username={username}/>
                     <Adbar/>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Sidebar.css"
 
-export default function Sidebar() {
+export default function Sidebar({user}) {
   return (
     <div className="sideBar">
       <div className="sbWrapper">

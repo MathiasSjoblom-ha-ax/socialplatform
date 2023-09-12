@@ -1,6 +1,6 @@
 import {React, useEffect, useState} from 'react'
 import "./Post.css"
-import SvgLike from '../../Svgicons/Like';
+import SvgLike from '../../Svgicons/Like'
 import {format} from "timeago.js"
 
 export default function Post({post}) {
@@ -14,7 +14,7 @@ const [user, setUser] = useState({});
 useEffect(() => {
   const fetchUsers = async () => {
       try {
-          const response = await fetch(`users/${post.userId}`);
+          const response = await fetch(`/users?userId=${post.userId}`);
           if (!response.ok) {
               throw new Error("Network response was not ok");
           }

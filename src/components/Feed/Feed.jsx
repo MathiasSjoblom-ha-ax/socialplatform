@@ -4,14 +4,14 @@ import Post from "./Post/Post"
 import Postbox from "./Postbox/Postbox"
 import {Posts} from "../../testData"
 
-export default function Feed() {
+export default function Feed({username}) {
     
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                const response = await fetch("posts/feed/632276de3c6f65d41493b950");
+                const response = username ? await fetch("posts/profile/" + username) : await fetch("posts/feed/632276de3c6f65d41493b950");
                 if (!response.ok) {
                     throw new Error("Network response was not ok");
                 }
@@ -23,7 +23,7 @@ export default function Feed() {
             }
         }
         fetchPosts();
-    }, []);
+    }, [username]);
     
 
     const FeedVersion = () => {
